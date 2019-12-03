@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{%block title%}Message{%endblock title%}
+
+{%block content%}
+
+{% if user %}
+{{user.name}}
+{% endif %}
+<h2>Message</h2>
+<form method="post">
+    <input type="number" placeholder="Reciever Name" name="reciever">
+    <textarea name="message-body">
+
+    </textarea>
+    <button>Submit</button>
+</form>
+{%endblock content%}
